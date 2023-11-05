@@ -1,0 +1,16 @@
+<html>
+    <head>
+        <title>Update Books</title>
+        <link rel="stylesheet" href="../static/addBooks.css">
+    </head>
+    <body>
+        <!-- <h1>Update Books</h1> -->
+        <form action="/bookUpdate" method="post">
+            <input type="hidden" name="_method" value="put">
+            <input type="text" name="name" placeholder="Enter the book name" required>
+            <input type="text" name="edition" placeholder="Enter the Edition" required>
+            <input type="text" name="price" placeholder="Enter the proce of book" required>
+            <button>Update Book</button>
+        </form>
+    </body>
+</html>

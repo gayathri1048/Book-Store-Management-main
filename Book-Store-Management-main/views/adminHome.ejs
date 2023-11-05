@@ -1,0 +1,25 @@
+<html>
+    <head>
+        <title>Admin Home</title>
+        <link rel="stylesheet" href="../static/adminHome.css">
+    </head>
+    <body>
+        <h1>Admin Home</h1>
+        <div class="main">
+            <div class="add">
+                <a href="/addBooks">Add Books</a>
+            </div>
+            <br><br>
+            <form action="/updateBooks" method="post">
+                <input type="text" name="name" placeholder="Enter the book you want to update">
+                <input type="text" name="edition" placeholder="Enter the edition">
+                <button>Update Books</button>
+            </form>
+            <form action="/deleteBooks" method="post">
+                <input type="text" name="name" placeholder="Enter the book you want to delete">
+                <input type="text" name="edition" placeholder="Enter the edition">
+                <button>Delete Books</button>
+            </form>
+        </div>
+    </body>
+</html>

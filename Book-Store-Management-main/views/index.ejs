@@ -1,0 +1,68 @@
+<html>
+    <head>
+        <title>Book Management Store</title>
+        <link rel="stylesheet" href="../static/style.css">
+    </head>
+    <body>
+        <div class="main">
+            <!-- <h1>Welcome to GC Book Management Store</h1> -->
+            <!-- navbar -->
+            <div class="navbar flex">
+                <ul class="flex menu">
+                    <!-- <li><img src="" alt="Our Logo" class="logo"></li> -->
+                    <li><i class="fa-solid fa-gears logo"></i></li>
+                    <li>About</li>
+                    <li><a class="sign" href="/signup">Sign Up</a></li>
+                    <li><a class="sign" href="/signin">Sign In</a></li>
+                </ul>
+                <div class="flex">
+                    <div class="search-container">
+                        <input type="text" class="search-input" placeholder="Search...">
+                        <button type="submit" class="search-button">
+                            <i class="fa-solid fa-magnifying-glass icon"></i>
+                        </button>
+                      </div>                      
+                    <div class="profile-icon">
+                        <a href="/profile"><i class="fa-solid fa-user"></i></a>
+                    </div>
+                </div>
+            </div>
+            <!-- End of navbar -->
+
+            <!-- Home page -->
+                <!-- <h2>User Home Page</h2> -->
+                <h1>Welcome to GC Book Management Store</h1>
+                <div class="books">
+                    <div class="book-container">
+                        <% for( let i of books ){ %>
+                            <div class="book">
+                                <div class="book-info">
+                                    <!-- <img src="<%= i.image %>" alt="<%= i.name %>"> -->
+                                    <p>Name of the Book: <%= i.name %></p>
+                                    <p>Author: <%= i.author %></p>
+                                    <p>Edition: <%= i.edition %></p>
+                                    <p>Price: <%= i.price %></p>
+                                </div>
+                                <form action="/add-to-cart" method="POST">
+                                    <input type="hidden" name="_id" value="<%= i._id %>">
+                                    <div class="button-container">
+                                        <button type="submit">Add to Cart</button>
+                                    </div>
+                                </form>
+                            </div>
+                        <% } %>
+                    </div>
+                </div>
+                
+                
+                
+                </div>
+            <!-- End of Home page -->
+
+            <!-- Registration form -->
+            <!-- Login form -->
+            <!-- Profile Management -->
+        </div>
+        <script src="https://kit.fontawesome.com/90e294121a.js" crossorigin="anonymous"></script>
+    </body>
+</html>

@@ -1,0 +1,24 @@
+<html>
+    <head>
+        <title>My Cart</title>
+        <link rel="stylesheet" href="../static/myCart.css">
+    </head>
+    <body>
+        <h1>Cart Items</h1>
+
+        <ul>
+            <% for (const [bookId, details] of bookCounts) { %>
+                <li>
+                    <h2><%= details.some.name %></h2>
+                    <p>Author: <%= details.some.author %></p>
+                    <p>Edition: <%= details.some.edition %></p>
+                    <p>Price: <%= details.some.price %></p>
+                    <p>Quantity: <%= details.count %></p>
+                </li>
+            <% } %>
+        </ul>
+        
+        
+
+    </body>
+</html>
